@@ -1,0 +1,363 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color:black;
+    color: white;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* ---------HEADER---------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+/* #openside{
+    position: fixed;
+} */
+.logo{
+    width:250px;
+    height:100px;
+    /* mix-blend-mode:color-dodge;  */
+    
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display:inline-block;
+    list-style: none;
+    margin:10px 20px;
+     
+}
+nav ul li a{
+    color: white; 
+    text-decoration: none;
+    font-size: larger;
+   position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width:0;
+    height:3px;
+    background-color: brown;
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width:100%;
+}
+.header-body{
+    font-size: 30px;
+    margin-top: 80px;
+}
+.header-body h2{
+    font-size: 50px;
+    margin-top: 30px;
+}
+.header-body h2 span{
+    color: red;
+}
+
+/* ----------ABOUT---------- */
+
+
+#about{
+    padding:20px 70px;
+    color: rgb(207, 203, 203);
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 40%;
+    max-width: 40%;
+}
+.col1 img{
+    width:360px;
+    height:580px;
+    border-radius: 5%;
+   background-color: rgb(67, 66, 66);
+}
+.col2{
+    flex-basis: 60%;
+     max-width: 60%;
+}
+.subtitle{
+    font-size: 55px;
+    font-weight: bolder;
+    color: aliceblue;
+}
+.desc{
+    margin-top: 20px;
+    font-size: larger;
+
+}
+.tabtitle{
+    display:flex;
+    margin: 30px 0 40px;
+}
+.tablink{
+    margin-right:50px;
+    font-size: larger;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+.tablink::after{
+    content:'';
+    width:0;
+    height:3px;
+    background-color: rgb(220, 23, 23);
+    position: absolute;
+    left:0px;
+    bottom:-6px;
+    transition: 0.5s;
+}
+.tablink.active::after{
+    width:50%;
+}
+.tabcontent ul li{
+    list-style: none;
+    margin:12px 0;
+    text-transform: capitalize;
+}
+.tabcontent ul li span{
+    font-size: large;
+    font-weight: bold;
+    color: rgb(138, 46, 46);
+}
+.tabcontent{
+    display:none;
+}
+.tabcontent.activetab{
+    display:block;
+}
+
+
+
+/* --------------------projects---------------- */
+
+
+#projects{
+    padding:30px 0;
+}
+.projectlist{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.projectlist div{
+    background-color: rgb(56, 54, 54);
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 15px;
+    transition: background 0.5s transform 0.7s;
+}
+.projectlist i{
+    font-size: 40px;
+    margin-bottom: 18px;
+    color: beige;
+}
+.projectlist div h2{
+    margin-bottom: 18px;
+    color: bisque;
+}
+.projectlist div a{
+    text-decoration: none;
+    color:azure;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: larger;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.projectlist div a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.projectlist div:hover{
+    background-color: rgb(227, 28, 28);
+    transform: translateY(-15px);
+}
+
+
+/* ------contact--------- */
+#contact{
+    margin-top: 35px;
+}
+.left{
+    flex-basis:35%;
+}
+.right{
+    flex-basis:60%;
+}
+.left p{
+    margin-top: 30px;
+}
+.left p i{
+    margin-right:15px;
+    font-size:20px;
+    color:rgb(238, 208, 170);
+}
+.icons{
+    margin-top: 30px;
+}
+.icons a{
+    margin-right: 15px;
+    font-size: 23px;
+    color: black;
+    /* position: relative; */
+    display: inline-block;
+    border:solid rgb(204, 198, 198) 2px;
+    border-radius: 50%;
+    padding:3px 3px 3px 3px;
+    background-color:rgb(204, 198, 198);
+    
+}
+.icons a:hover{
+    background-color:rgb(71, 183, 183);
+    transform: translateY(-10px);
+    /* position: absolute; */
+}
+.btn{
+    border:solid rgba(231, 57, 45, 0.553) 2px;
+    padding: 13px 20px;
+    background-color: rgb(240, 41, 27);
+    border-radius: 5px;
+    margin-top: 30px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.btn:hover{
+    font-weight: bolder;
+}
+.right form{
+    width:100%;
+}
+form input, form textarea{
+    width:100%;
+    border:0;
+    outline:none;
+    background-color: rgb(45, 45, 45);
+    padding: 15px;
+    margin:10px 0;
+    font-size: larger;
+    color: white;
+    border-radius: 5px;
+}
+.right textarea{
+    font-size: 20px;
+}
+.right button{
+    padding:15px 60px;
+    font-size: larger;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* ---------------responsiveness------------- */
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width:600px){
+    .header{
+        /* background-image: url(); */
+    }
+    .header-body{
+        margin-top: 70%; 
+        font-size: 20px; 
+    }
+    .header-body h2{
+        font-size:25px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background-color: red;
+        position: fixed;
+        top:0;
+        right:-200px;
+        width:200px;
+        height:100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition:right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin:20px;
+    }
+    nav ul .fa-solid{
+        position:absolute;
+        top:20px;
+        left:20px;
+        cursor:pointer;
+    }
+    .col1 img{
+        width: 250px;
+        height: 300px;
+        margin-top: 30px;
+    }
+    .subtitle{
+        font-size: 25px;
+        margin-top: 20px;
+    }
+    .projectlist i {
+        font-size: 28px;
+    }
+    .projectlist h2{
+        font-size: 20px;
+    }
+    .projectlist p{
+        font-size: 15px;
+    }
+    .projectlist a{
+        font-size: 20px;
+    }
+    .icons a {
+        font-size: 15px;
+    }
+    .contact .left {
+       flex-basis: 100%;
+    }
+    .contact .right{
+        flex-basis: 100%;
+     }
+     .btn {
+        padding: 10px 20px;
+        font-size: 15px;
+     }
+     .right button{
+        padding: 10px 20px;
+        font-size: 15px;
+        margin-top:5px;
+     }
+     form{
+        font-size: 15px;
+     }
+}
